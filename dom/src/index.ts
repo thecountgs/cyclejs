@@ -1,4 +1,4 @@
-const thunk = require('snabbdom/thunk');
+import thunk = require('snabbdom/thunk');
 export {thunk};
 export * from './interfaces';
 export {DOMSource, EventsFnOptions} from './DOMSource';

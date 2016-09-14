@@ -1,5 +1,5 @@
 import {StreamAdapter} from '@cycle/base';
-import {init} from 'snabbdom';
+import snabbdom = require('snabbdom');
 import xs, {Stream} from 'xstream';
 import {DOMSource} from './DOMSource';
 import {MainDOMSource} from './MainDOMSource';
@@ -39,7 +39,7 @@ function makeDOMDriver(container: string | Element, options?: DOMDriverOptions):
   const transposition = options.transposition || false;
   const modules = options.modules || defaultModules;
   const isolateModule = new IsolateModule((new MapPolyfill<string, Element>()));
-  const patch = init([isolateModule.createModule()].concat(modules));
+  const patch = snabbdom.init([isolateModule.createModule()].concat(modules));
   const rootElement = getElement(container);
   const vnodeWrapper = new VNodeWrapper(rootElement);
   const delegators = new MapPolyfill<string, EventDelegator>();

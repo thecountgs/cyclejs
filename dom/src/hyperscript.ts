@@ -1,7 +1,7 @@
 import {Stream} from 'xstream';
 import {VNode} from './interfaces';
-import * as is from 'snabbdom/is';
-const vnode = require('snabbdom/vnode');
+import is = require('snabbdom/is');
+import vnode = require('snabbdom/vnode');
 
 function isGenericStream(x: any): boolean {
   return !Array.isArray(x) && typeof x.map === `function`;

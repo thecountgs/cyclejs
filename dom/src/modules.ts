@@ -1,10 +1,10 @@
 declare function require(s: string): any;
-const ClassModule = require('snabbdom/modules/class');
-const PropsModule = require('snabbdom/modules/props');
-const AttrsModule = require('snabbdom/modules/attributes');
-const EventsModule = require('snabbdom/modules/eventlisteners');
-const StyleModule = require('snabbdom/modules/style');
-const HeroModule = require('snabbdom/modules/hero');
+import ClassModule = require('snabbdom/modules/class');
+import PropsModule = require('snabbdom/modules/props');
+import AttrsModule = require('snabbdom/modules/attributes');
+import EventsModule = require('snabbdom/modules/eventlisteners');
+import StyleModule = require('snabbdom/modules/style');
+import HeroModule = require('snabbdom/modules/hero');
 
 export default [StyleModule, ClassModule, PropsModule, AttrsModule];
 
